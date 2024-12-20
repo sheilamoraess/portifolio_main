@@ -1,69 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio de Sheila</title>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    background-color: lightpink;
-    color: #333;
-    font-size: 16px;
-    line-height: 1.6;
-}
+        body {
+            background-color: lightpink;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-.center {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 2%;
-}
+        .center {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 2%;
+        }
 
-header {
-    background-color: skyblue;
-    color: peachpuff;
-    padding: 20px 0;
-}
+        header {
+            background-color: skyblue;
+            color: peachpuff;
+            padding: 20px 0;
+        }
 
-header .logo h2 {
-    font-size: 28px;
-    font-weight: bold;
-}
+        header .logo h2 {
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-header .menu a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
+        header .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
 
-header .menu a:hover {
-    color: #f39c12; /* Cor de destaque no hover */
-}
+        header .menu a:hover {
+            color: #f39c12;
+            /* Cor de destaque no hover */
+        }
 
-footer {
-    background-color: peachpuff;
-    color: black;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+        footer {
+            background-color: peachpuff;
+            color: black;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
+        /* Estilos dos projetos */
+        .projects {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .project-slider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cards-container {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            /* Ajuste conforme necessário */
+            justify-content: space-between;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 220px;
+            margin: 0 10px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .slider-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background-color: #f39c12;
+        }
+
+        .prev {
+            position: absolute;
+            left: 10px;
+        }
+
+        .next {
+            position: absolute;
+            right: 10px;
+        }
     </style> <!-- Assumindo que o CSS está em style.css -->
 </head>
+
 <body>
 
     <header>
@@ -86,11 +154,48 @@ footer {
             <h1>Bem-vindo ao meu portfólio!</h1>
             <p>Explore meus projetos e saiba mais sobre meu trabalho.</p>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Sheila. Todos os direitos reservados.</p>
-    </footer>
+        <main>
+            <!-- Conteúdo principal do site -->
+            <section class="intro">
+                <h1>Bem-vindo ao meu portfólio!</h1>
+                <p>Explore meus projetos e saiba mais sobre meu trabalho.</p>
+            </section>
 
+            <!-- Seção de projetos -->
+            <section class="projects">
+                <h2>Meus Projetos</h2>
+                <div class="project-slider">
+                    <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="cards-container">
+                        <div class="project-card">
+                            <h3>Projeto 1</h3>
+                            <p>Descrição do Projeto 1.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Projeto 2</h3>
+                            <p>Descrição do Projeto 2.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Projeto 3</h3>
+                            <p>Descrição do Projeto 3.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Projeto 4</h3>
+                            <p>Descrição do Projeto 4.</p>
+                        </div>
+                    </div>
+                    <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Sheila. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="script.js"></script>
 </body>
+
 </html>
