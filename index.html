@@ -51,7 +51,6 @@
 
         header .menu a:hover {
             color: #f39c12;
-            /* Cor de destaque no hover */
         }
 
         footer {
@@ -64,70 +63,88 @@
             width: 100%;
         }
 
-        /* Estilos dos projetos */
         .projects {
-            padding: 40px 0;
-            text-align: center;
+            padding: 20px;
         }
 
-        .projects h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .project-slider {
+        .slider-wrapper {
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        .slider-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
         }
 
         .cards-container {
             display: flex;
-            overflow: hidden;
-            width: 80%;
-            /* Ajuste conforme necessário */
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
         }
 
         .project-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            width: 220px;
-            margin: 0 10px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .slider-btn {
-            background-color: #333;
-            color: white;
-            border: none;
-            font-size: 24px;
+            flex: 0 0 auto;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
             padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
         }
 
-        .slider-btn:hover {
-            background-color: #f39c12;
+        /* Media Queries para Responsividade */
+
+        @media screen and (max-width: 768px) {
+            .center {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header .menu a {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            .project-card {
+                width: 150px;
+                height: 250px;
+            }
+
+            .slider-btn {
+                padding: 8px;
+            }
         }
 
-        .prev {
-            position: absolute;
-            left: 10px;
-        }
+        @media screen and (max-width: 480px) {
+            .project-card {
+                width: 100px;
+                height: 200px;
+            }
 
-        .next {
-            position: absolute;
-            right: 10px;
+            .header .menu a {
+                font-size: 14px;
+            }
+
+            .slider-btn {
+                padding: 5px;
+            }
         }
     </style> <!-- Assumindo que o CSS está em style.css -->
 </head>
@@ -183,6 +200,22 @@
                         <div class="project-card">
                             <h3>Projeto 4</h3>
                             <p>Descrição do Projeto 4.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Projeto 5</h3>
+                            <p>Descrição do Projeto 5.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Projeto 6</h3>
+                            <p>Descrição do Projeto 6.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Projeto 7</h3>
+                            <p>Descrição do Projeto 7.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Projeto 8</h3>
+                            <p>Descrição do Projeto 8.</p>
                         </div>
                     </div>
                     <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
