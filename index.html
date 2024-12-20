@@ -1,47 +1,96 @@
-<!DOCTYPE HTML>
-<html lang="" en">
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="IE=chrome">
-    <meta name="viewpoint" content="width=devide-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Sheila</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        .center {
-            max-width: 960px;
-            margin: 0 auto;
-            display: flex;
-            width: 100%;
-            padding: 0 2%;
-        }
+body {
+    background-color: lightpink;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-        header {
-            padding: 20px 0;
-            color: NAVY;
-            background-color: lightpink;
-        }
-    </style>
+.center {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2%;
+}
+
+header {
+    background-color: skyblue;
+    color: peachpuff;
+    padding: 20px 0;
+}
+
+header .logo h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header .menu a:hover {
+    color: #f39c12; /* Cor de destaque no hover */
+}
+
+footer {
+    background-color: peachpuff;
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style> <!-- Assumindo que o CSS está em style.css -->
 </head>
-
 <body>
+
     <header>
-        <div style="justify-content: space-around;" class="center">
+        <div class="center">
             <div class="logo">
                 <h2>SHEILA</h2>
             </div>
             <div class="menu">
-                <a href="">HOME</a>
-                <a href="">SOBRE</a>
+                <a href="#">HOME</a>
+                <a href="#">SOBRE</a>
+                <a href="#">PROJETOS</a>
+                <a href="#">CONTATO</a>
             </div>
-
         </div>
     </header>
-</body>
 
+    <main>
+        <!-- Conteúdo principal do site -->
+        <section class="intro">
+            <h1>Bem-vindo ao meu portfólio!</h1>
+            <p>Explore meus projetos e saiba mais sobre meu trabalho.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sheila. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
 </html>
