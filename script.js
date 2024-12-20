@@ -1,36 +1,36 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    const cardsContainer = document.querySelector('.cards-container');
-    const cards = document.querySelectorAll('.project-card');
+document.addEventListener("DOMContentLoaded", () => {
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    const carouselContainer = document.querySelector(".carousel-container");
+    const cards = document.querySelectorAll(".project-card");
+    const totalCards = cards.length;
+    let currentIndex = 0;
 
-    let scrollAmount = 0;
-    const cardWidth = cards[0].offsetWidth + 20; // Inclui a margem entre os cards
-
-    // Função para mover os cards para a direita
-    nextBtn.addEventListener('click', function() {
-        // Verifica se ainda há espaço para rolar
-        if (scrollAmount < cardsContainer.scrollWidth - cardsContainer.clientWidth) {
-            scrollAmount += cardWidth;
-            cardsContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-        } else {
-            // Se chegou ao final, volta para o início para criar o loop infinito
-            scrollAmount = 0;
-            cardsContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    // Função para mover o carrossel
+    function moveCarousel(direction) {
+        if (direction === -1) {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = totalCards - 1;
+            }
+        } else if (direction === 1) {
+            currentIndex++;
+            if (currentIndex >= totalCards) {
+                currentIndex = 0;
+            }
         }
-    });
+        updateCarouselPosition();
+    }
 
-    // Função para mover os cards para a esquerda
-    prevBtn.addEventListener('click', function() {
-        // Verifica se ainda há espaço para rolar para a esquerda
-        if (scrollAmount > 0) {
-            scrollAmount -= cardWidth;
-            cardsContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-        } else {
-            // Se chegou ao início, vai para o final para criar o loop infinito
-            scrollAmount = cardsContainer.scrollWidth - cardsContainer.clientWidth;
-            cardsContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-        }
-    });
+    // Função para atualizar a posição do carrossel
+    function updateCarouselPosition() {
+        const cardWidth = document.querySelector(".project-card").offsetWidth;
+        carouselContainer.style.transform = `translateX(-${currentIndex * (cardWidth + 20)}px)`; // 20px é o gap entre os cards
+    }
+
+    prevButton.addEventListener("click", () => moveCarousel(-1));
+    nextButton.addEventListener("click", () => moveCarousel(1));
+
+    // Inicializa a posição do carrossel
+    updateCarouselPosition();
 });
