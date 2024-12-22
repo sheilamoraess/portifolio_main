@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio de Sheila</title>
-    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS -->
-   </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-
     <header>
         <div class="center">
             <div class="logo">
@@ -25,13 +24,7 @@
     </header>
 
     <main>
-        <!-- Conteúdo principal do site -->
-        <section class="intro">
-            <h1>Bem-vindo ao meu portfólio!</h1>
-            <p>Explore meus projetos e saiba mais sobre meu trabalho.</p>
-        </section>
-
-        <!-- Seção de projetos -->
+        <!-- Seção do Carrossel -->
         <section class="projects">
             <h2>Meus Projetos</h2>
             <div class="project-slider">
@@ -53,25 +46,35 @@
                         <h3>Projeto 4</h3>
                         <p>Descrição do Projeto 4.</p>
                     </div>
-                    <div class="project-card">
-                        <h3>Projeto 5</h3>
-                        <p>Descrição do Projeto 5.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Projeto 6</h3>
-                        <p>Descrição do Projeto 6.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Projeto 7</h3>
-                        <p>Descrição do Projeto 7.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Projeto 8</h3>
-                        <p>Descrição do Projeto 8.</p>
-                    </div>
+        
                 </div>
                 <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
             </div>
+        </section>
+
+        <!-- Seção de Texto -->
+        <section class="text-section">
+            <h2>Sobre Mim</h2>
+            <p>
+                Olá, sou Sheila e trabalho com desenvolvimento web. Neste portfólio, você encontrará alguns dos meus projetos mais recentes.
+                Sou apaixonada por criar soluções digitais que fazem a diferença na vida das pessoas e empresas. Se quiser saber mais sobre meu
+                trabalho ou entrar em contato, estou à disposição!
+            </p>
+        </section>
+
+        <!-- Seção de Imagens -->
+        <section class="image-section">
+            <h2>Imagens dos Projetos</h2>
+            <div class="image-gallery">
+                <img src="imagem1.jpg" alt="Imagem do Projeto 1">
+                <img src="imagem2.jpg" alt="Imagem do Projeto 2">
+                <img src="imagem3.jpg" alt="Imagem do Projeto 3">
+            </div>
+        </section>
+
+        <!-- Seção em Branco -->
+        <section class="empty-section">
+            <p>Aqui poderia haver mais conteúdo, mas esta seção está em branco por enquanto.</p>
         </section>
     </main>
 

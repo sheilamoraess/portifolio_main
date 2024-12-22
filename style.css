@@ -1,12 +1,10 @@
-/* Reset de estilo padrão */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 10px;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-/* Estilos gerais do corpo */
 body {
     background-color: lightpink;
     color: #333;
@@ -14,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Centralização do conteúdo no header */
 .center {
     max-width: 960px;
     margin: 0 auto;
@@ -25,7 +22,6 @@ body {
     padding: 0 2%;
 }
 
-/* Estilos do header */
 header {
     background-color: skyblue;
     color: peachpuff;
@@ -49,18 +45,19 @@ header .menu a:hover {
     color: #f39c12;
 }
 
-/* Estilos do footer */
 footer {
     background-color: peachpuff;
     color: black;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px;
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom: -50px;
+    width: 80%;
 }
 
-/* Estilos da seção de projetos */
+
+
+/* Seção dos Projetos */
 .projects {
     padding: 40px 0;
     text-align: center;
@@ -102,7 +99,6 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Botões de navegação do carrossel */
 .slider-btn {
     background-color: #333;
     color: white;
@@ -125,4 +121,44 @@ footer {
 .next {
     position: absolute;
     right: 10px;
+}
+
+/* Seção de Texto */
+.text-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.text-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Seção de Imagens */
+.image-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.image-gallery img {
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Seção em Branco */
+.empty-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f9f9f9;
 }

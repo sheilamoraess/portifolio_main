@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.querySelector(".prev");
     const nextButton = document.querySelector(".next");
-    const carouselContainer = document.querySelector(".carousel-container");
+    const cardsContainer = document.querySelector(".cards-container");
     const cards = document.querySelectorAll(".project-card");
     const totalCards = cards.length;
     let currentIndex = 0;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Função para atualizar a posição do carrossel
     function updateCarouselPosition() {
         const cardWidth = document.querySelector(".project-card").offsetWidth;
-        carouselContainer.style.transform = `translateX(-${currentIndex * (cardWidth + 20)}px)`; // 20px é o gap entre os cards
+        cardsContainer.style.transform = `translateX(-${currentIndex * (cardWidth + 20)}px)`; // 20px é o gap entre os cards
     }
 
     prevButton.addEventListener("click", () => moveCarousel(-1));
